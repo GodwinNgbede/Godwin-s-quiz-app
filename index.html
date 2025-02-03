@@ -7,63 +7,14 @@
     <title>Godwin's quiz app</title>
   </head>
   <body>
-    <div class="container" id="container">
-      <div class="text-ctn">
-        <h1>KNOW MORE ABOUT JAVASCRIPT</h1>
-        <p class="text">
-          One of the most popular programming languages worldwide is JavaScript.
-          It was first created by Netscape in the middle of the 1990s, and it is
-          now the foundation of contemporary web development. JavaScript is a
-          high-level, interpreted language that lets programmers make dynamic,
-          interactive websites. JavaScript enhances user experience whether
-          you're creating a basic website or a sophisticated web-based
-          application.
-          <br />A scripting language that runs directly in web browsers,
-          JavaScript offers interactivity in contrast to HTML and CSS, which
-          specify the structure and design of a webpage. It allows developers to
-          create features like form validation, animations, dynamic content
-          updates, and even complex web applications like social media platforms
-          and e-commerce sites. JavaScript was first used exclusively for
-          frontend development, but with the advent of Node.js, it became a
-          full-stack development language.
-        </p>
-        <button onclick="showPage2()" class="btn" id="btn">
-          Proceed to quiz
-        </button>
-      </div>
-      <div class="img-ctn">
-        <img src="./images/js logo.png" class="js-logo" alt="loading" />
-      </div>
-    </div>
-
-    <!-- quiz-container-page -->
-
-    <div class="quiz-page" id="quiz-page">
-      <!-- <img src="./images/Q&A background.webp" alt="loading" /> -->
-      <div class="quiz-page-ctn">
-        <div class="quiz-ctn" id="quiz-ctn">
-          <!-- <div class="quiz-title">Godwin web3 quiz</div> -->
-          <div class="quiz-time">Time left:</div>
-          <div class="quiz-min">50min</div>
-        </div>
-
-        <div class="quiz-questions">
-          <h2>
-            <span
-              >What is the correct way to declare a JavaScript variable?</span
-            >
-          </h2>
-        </div>
-        <div class="question-options">
-          <button class="correct"><span>variable x</span></button>
-          <button><span>var x</span></button>
-          <button><span>x = variable</span></button>
-          <button><span>let variable x</span></button>
-        </div>
-        <div class="control-btn">
-          <button id="next-btn" class="next-btn">Next</button>
-        </div>
-      </div>
+    <div class="container">
+      <h1>Godwin's web3 quiz</h1>
+      <p id="timer">Time Left: 50:00</p>
+      <h2 id="question">Display my questions here</h2>
+      <div id="options"></div>
+      <button id="nextBtn" class="nextBtn" alt="loading">
+        Show Next Question
+      </button>
     </div>
 
     <script src="index.js"></script>
