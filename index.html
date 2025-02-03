@@ -7,7 +7,7 @@
     <title>Godwin's quiz app</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <div class="text-ctn">
         <h1>KNOW MORE ABOUT JAVASCRIPT</h1>
         <p class="text">
@@ -27,12 +27,45 @@
           frontend development, but with the advent of Node.js, it became a
           full-stack development language.
         </p>
-        <button class="btn">Proceed to guide</button>
+        <button onclick="showPage2()" class="btn" id="btn">
+          Proceed to quiz
+        </button>
       </div>
       <div class="img-ctn">
         <img src="./images/js logo.png" class="js-logo" alt="loading" />
       </div>
     </div>
+
+    <!-- quiz-container-page -->
+
+    <div class="quiz-page" id="quiz-page">
+      <!-- <img src="./images/Q&A background.webp" alt="loading" /> -->
+      <div class="quiz-page-ctn">
+        <div class="quiz-ctn" id="quiz-ctn">
+          <!-- <div class="quiz-title">Godwin web3 quiz</div> -->
+          <div class="quiz-time">Time left:</div>
+          <div class="quiz-min">50min</div>
+        </div>
+
+        <div class="quiz-questions">
+          <h2>
+            <span
+              >What is the correct way to declare a JavaScript variable?</span
+            >
+          </h2>
+        </div>
+        <div class="question-options">
+          <button class="correct"><span>variable x</span></button>
+          <button><span>var x</span></button>
+          <button><span>x = variable</span></button>
+          <button><span>let variable x</span></button>
+        </div>
+        <div class="control-btn">
+          <button id="next-btn" class="next-btn">Next</button>
+        </div>
+      </div>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>

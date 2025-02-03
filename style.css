@@ -1,14 +1,32 @@
-body {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --hue-wrong: 0;
+  --hue-correct: 140;
+}
+body,
+.quiz-page {
   margin: 0;
   background: rgba(237, 248, 243, 0.008);
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
+}
+body.correct {
+  --hue: var(var(--hue-correct));
+}
+body.wrong {
+  --hue: var(var(--hue-wrong));
 }
 .container {
   display: flex;
   justify-content: space-between;
   gap: 10rem;
   padding: 2rem;
+  width: 100%;
 }
 .text-ctn {
   display: flex;
@@ -42,4 +60,81 @@ h1 {
   background-color: #4caf50;
   color: white;
   cursor: pointer;
+}
+
+/* quiz page styling */
+.quiz-page {
+  display: none;
+  background-image: url(./images/Q&A\ background.webp);
+  background-size: cover;
+}
+.quiz-page-ctn {
+  margin: 50px auto;
+  padding: 20px;
+  width: 800px;
+  max-width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(153, 144, 161);
+  box-shadow: 0 0 12px 6px rgb(253, 222, 47);
+  border-radius: 15px;
+}
+.quiz-ctn {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid black;
+}
+.quiz-ctn .quiz-time {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+/* .quiz-questions {
+  display: flex;
+} */
+.quiz-questions h2 {
+  padding: 20px;
+  margin-top: 5px;
+  font-size: 2rem;
+  color: wheat;
+}
+
+.question-options button {
+  display: grid;
+
+  padding: 5px;
+  margin: 10px;
+
+  width: 400px;
+  font-size: 2rem;
+  color: wheat;
+  background-color: black;
+  cursor: pointer;
+}
+.question-options button:hover {
+  border-color: rgb(230, 202, 41);
+  box-shadow: 0 0 8px 4px;
+}
+
+.control-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.control-btn button {
+  font-size: 1.3rem;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: blue;
+  color: wheat;
+  border: none;
+}
+.control-btn button:hover {
+  background: rgb(49, 49, 158);
 }
